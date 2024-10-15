@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling a form</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #form{
+            background-color: rgb(235, 55, 55);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #form>div{
+            height: 87%;
+            width: 28%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            
+        }
+        #form>div>form>select{
+            width: 90%;
+            border: 1px solid rgb(201, 191, 191);
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #form>div>form{
+            color: black;
+            
+        }
+        #message{
+            width: 90%;
+            border: 1px solid rgb(201, 191, 191);
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #rating>p{
+            width: 90%;
+            padding-left: 7px;
+            margin-bottom: 10px;
+            
+            
+        }
+        #age{
+            width: 90%;
+            margin-right: 20px;
+            border: 1px solid rgb(201, 191, 191);
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #email{
+            width: 90%;
+            border: 1px solid rgb(201, 191, 191);
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #password{
+            width: 90%;
+            border: 1px solid rgb(201, 191, 191);
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #website{
+            width: 90%;
+            margin-right: 40px;
+            border: 1px solid rgb(201, 191, 191);
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        #button{
+            background-color: green;
+            padding-left: 14px;
+            padding-right: 14px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-left: 36%;
+            border: none;
+            color: white;
+        }
+        #form>h4{
+            margin-left: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h1>Feedback Form</h1>
+        <div>
+            <form>
+                <!-- Feedback dropdown menu -->
+                <label for="feedback"><b>Feedback type:</b></label>
+                <select id="feedback" name="feedback">
+                  <option value="">Select an option</option>
+                  <option value="positive">Positive</option>
+                  <option value="negative">Negative</option>
+                  <option value="neutral">Neutral</option>
+                </select>
+              
+                <!-- Text area for user message -->
+                <label for="message"><b>Message: </b></label>
+                <textarea id="message" name="message" rows="5" cols="30"></textarea>
+              
+                <!-- Radio button for website rating -->
+                <div id="rating">
+                    <p><b>Website Rating:</b></p>
+                    <input type="radio" id="rating1" name="rating" value="Excellent">
+                    <label for="rating1"><b>Excellent</b></label>
+                    <input type="radio" id="rating2" name="rating" value="Good">
+                    <label for="rating2"><b>Good</b></label>
+                    <input type="radio" id="rating3" name="rating" value="Average">
+                    <label for="rating3"><b>Average</b></label>
+                    <input type="radio" id="rating4" name="rating" value="Poor">
+                    <label for="rating4"><b>Poor</b></label>
+                </div>
+                
+              
+                <!-- Input for age -->
+                <label for="age"><b>Age:</b></label>
+                <input type="number" id="age" name="age" min="18" max="100">
+              
+                <!-- Email input field -->
+                <label for="email"><b>Email:</b></label>
+                <input type="email" id="email" name="email">
+              
+                <!-- Password input field -->
+                <label for="password"><b>Password:</b></label>
+                <input type="password" id="password" name="password">
+              
+                <!-- Option website URL field -->
+                <label for="website"><b>Website URL:</b></label>
+                <input type="url" id="website" name="website">
+              
+                <!-- Checkbox for terms and condition -->
+                <h4><input type="checkbox" id="terms" name="terms"> I agree to the terms and conditions: </h4>
+                
+              
+                <!-- Submission button -->
+                <button id="button">Submit</button>
+              </form>
+        </div>
+    </div>
+    
+</body>
+</html>
